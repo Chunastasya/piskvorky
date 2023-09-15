@@ -2,15 +2,22 @@ h1,
 p,
 a {
     color: white;
+    font-family: 'Lobster', cursive;
+font-family: 'Montserrat', sans-serif;
+font-family: 'Playfair Display', serif;
+font-family: 'Raleway', sans-serif;
 }
 
 .container {
     background-image: linear-gradient( #615dad,  #ffc8da);
+    height: 100%;
 }
 
 .piskvorky { 
 background-color: #283e50;
-width: 400px;
+width: 350px;
+height: 500px;
+margin-top: 110px;
 border-radius: 5px;
 position: relative;
 left: 33%;
@@ -28,4 +35,40 @@ left: 33%;
 padding: 20px;
 display: flex;
 
+}
+
+.buttons {
+display: flex;
+flex-direction: column;
+}
+
+.button-pravidla {
+background-color:  #1fcca4;
+padding-top: 15px;
+padding-bottom: 15px;
+}
+
+.button-zacatek {
+background-color: #0197f6 ;
+padding-top: 15px;
+padding-bottom: 15px;
+
+}
+
+/* Po najetí na tlačítko černý border */
+.button-pravidla:hover {
+    background-color:  #1cbb96;
+}
+
+.button-zacatek:hover {
+    background-color:  #0090e9;
+}
+
+.button-pravidla:active {
+    border: none;
+    outline: none;
+}
+
+.button-zacatek:active {
+    background-color:  #0090e9;
 }
