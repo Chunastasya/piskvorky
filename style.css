@@ -1,26 +1,27 @@
+body {
+    background-image: linear-gradient( #615dad,  #ffc8da);
+    min-height: 100vh;
+}
+
 h1,
 p,
 a {
     color: white;
-    font-family: 'Lobster', cursive;
-font-family: 'Montserrat', sans-serif;
-font-family: 'Playfair Display', serif;
-font-family: 'Raleway', sans-serif;
+    font-family: 'Lobster';
+letter-spacing: 1px; 
+
 }
 
-.container {
-    background-image: linear-gradient( #615dad,  #ffc8da);
-    height: 100%;
-}
+
 
 .piskvorky { 
 background-color: #283e50;
+border-radius: 5px;
 width: 350px;
 height: 500px;
 margin-top: 110px;
-border-radius: 5px;
 position: relative;
-left: 33%;
+left: 35%;
   display: flex;
   flex-direction: column;
   justify-content: center ;
@@ -29,33 +30,37 @@ left: 33%;
 .title {
     display: flex;
     justify-content: center;
+    margin-bottom: 0;
 }
 
 .text {
 padding: 20px;
 display: flex;
+text-align: center;
 
 }
 
 .buttons {
 display: flex;
 flex-direction: column;
+
 }
 
 .button-pravidla {
 background-color:  #1fcca4;
 padding-top: 15px;
 padding-bottom: 15px;
+border: none;
 }
 
 .button-zacatek {
 background-color: #0197f6 ;
 padding-top: 15px;
 padding-bottom: 15px;
-
+border-width: 1px 0 0 0;
 }
 
-/* Po najetí na tlačítko černý border */
+
 .button-pravidla:hover {
     background-color:  #1cbb96;
 }
@@ -64,11 +69,15 @@ padding-bottom: 15px;
     background-color:  #0090e9;
 }
 
-.button-pravidla:active {
-    border: none;
-    outline: none;
+
+img {
+    border-radius: 5px 5px 0 0;
 }
 
-.button-zacatek:active {
-    background-color:  #0090e9;
+a {
+    text-decoration: none;
+    width: 350px;
+    flex-grow: 1;
+    display: block;
 }
+
