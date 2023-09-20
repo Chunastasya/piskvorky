@@ -7,13 +7,16 @@ h1,
 p,
 a {
     color: white;
-    font-family: 'Lobster';
+    font-family: 'Lobster', cursive;
 letter-spacing: 1px; 
 
 }
 
+p,
+a {
+    font-family:Verdana, Geneva, Tahoma, sans-serif
 
-
+}
 .piskvorky { 
 background-color: #283e50;
 border-radius: 5px;
@@ -78,6 +81,6 @@ a {
     text-decoration: none;
     width: 350px;
     flex-grow: 1;
-    display: block;
+    display: block; 
 }
 
