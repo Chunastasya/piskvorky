@@ -85,3 +85,11 @@ a {
 }
 
 
+.board__field--circle {
+background-image: url(image/circle2.svg);
+
+}
+
+.board__field--cross {
+background-image: url(image/cross2.svg);
+}

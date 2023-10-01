@@ -25,7 +25,6 @@ h2 {
 .piskvorky {
     width: 400px;
     max-width: 80vmin;
-    /* height: 500px;   */
     margin-left: auto;
     margin-right: auto;
     display: flex;
@@ -53,7 +52,6 @@ h2 {
 }
 
 button {
-     /* height: 40px; */
     width: 10%;
     border: 1px solid black;   
     background: linear-gradient(#cdb4dc7c, #f0e9ec);
@@ -68,9 +66,6 @@ button {
    padding: 8px;
    border: none;
    margin: 5px;
-   /* position: relative;
-   left: 163px;
-   top: 8px; */
 
 
 }
@@ -106,3 +101,5 @@ background-color:white;
         display: flex;
         flex-grow: 1;
     }
+
+  
