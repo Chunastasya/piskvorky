@@ -1,4 +1,6 @@
-.buttons button {
+
+
+.buttons  {
     box-sizing: border-box; 
     padding: 0;
     aspect-ratio: 1/1;
@@ -54,7 +56,7 @@ h2 {
 button {
     width: 10%;
     border: 1px solid black;   
-    background: linear-gradient(#cdb4dc7c, #f0e9ec);
+    background: linear-gradient(#cdb4dc7c, #f0e9ec); 
     
 }
 
@@ -102,4 +104,15 @@ background-color:white;
         flex-grow: 1;
     }
 
-  
+    .board__field--circle {
+        background-image: url(image/circle2.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        
+        }
+        
+        .board__field--cross {
+        background-image: url(image/cross2.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        }

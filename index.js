@@ -37,3 +37,15 @@ let ikonaHrace = document.querySelector('#ikona-hrace')
  button8.addEventListener("click", pridejZnak)
  button9.addEventListener("click", pridejZnak)
  button10.addEventListener("click", pridejZnak)
+
+
+ const Refresh = (event) => {
+    const otazka = window.confirm('Opravdu chcete hru spustit znovu?');
+    if (otazka === true) {
+        window.open("hra.html", 'Refresh...');
+      } else {
+        event.preventDefault()
+      }
+}
+
+document.querySelector('#refresh').addEventListener('click', Refresh)
