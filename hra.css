@@ -57,6 +57,7 @@ button {
     width: 10%;
     border: 1px solid black;   
     background: linear-gradient(#cdb4dc7c, #f0e9ec); 
+    cursor: pointer;
     
 }
 
@@ -82,22 +83,27 @@ background-color:#1fcca4;
 }
 
 .kolecko {
+   
     margin-bottom: 13px;
     margin-left: 7px;
+
 }
 
 button:hover {
 background-color:white;
 }
 
-.tlacitko__home:hover {
+
+    .tlacitko__home:hover {
     background-color:#1cbb96;
     }
 
-.tlacitko__restart:hover {
+    .tlacitko__restart:hover {
         background-color: #0090e9;
         
     }
+
+    
 
     .hrajeKolecko {
         display: flex;
@@ -105,14 +111,15 @@ background-color:white;
     }
 
     .board__field--circle {
-        background-image: url(image/circle2.svg);
+        background: url(image/circle2.svg),linear-gradient(#cdb4dc7c, #f0e9ec);
         background-repeat: no-repeat;
         background-position: center;
         
         }
         
         .board__field--cross {
-        background-image: url(image/cross2.svg);
+        background: url(image/cross2.svg),linear-gradient(#cdb4dc7c, #f0e9ec); 
         background-repeat: no-repeat;
         background-position: center;
+        
         }
