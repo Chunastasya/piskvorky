@@ -6,32 +6,52 @@ let ikonaHrace = document.querySelector('#ikona-hrace')
 
  let currentPlayer = 'circle'
 
+
+
  const pridejZnak = (event) => {
     if (currentPlayer === "circle") {
       ikonaHrace.src = "image/cross.svg"
       event.target.classList.add("board__field--circle")
       event.target.disabled = true;
-      return currentPlayer = "cross"
+       currentPlayer = "cross"
     } else if (currentPlayer === "cross"){
       ikonaHrace.src = "image/circle.svg"
       event.target.classList.add("board__field--cross")
       event.target.disabled = true;
-      return currentPlayer = "circle"
-    }
+       currentPlayer = "circle"
+    };
+    const buttons = document.querySelectorAll('.buttons button');
+    
+    console.log(buttons);
+    const herniPole = Array.from(buttons).map((button2) => {
+      if (button2.classList.contains('board__field--circle')){
+        return 'o';
+      }
+      if (button2.classList.contains('board__field--cross')){
+        return 'x';
+      }
+      return '_';
+    });
+   
+
+    
+const vitez = findWinner(herniPole)
+if (vitez === 'o' || vitez === 'x') {
+  
+  const zobrazAlert = () => {
+    alert(`Vyhrál hráč se symbolem ${vitez}.`);
+    location.reload();
+  };
+  setTimeout(zobrazAlert, 100);
+  
+ 
+}
+
   }
  
+  
 
-  // const button1 = document.querySelector('button:nth-child(1)').addEventListener("click", pridejZnak)
-  // const button2 = document.querySelector('button:nth-child(2)').addEventListener("click", pridejZnak)
-  // const button3 = document.querySelector('button:nth-child(3)').addEventListener("click", pridejZnak)
-  // const button4 = document.querySelector('button:nth-child(4)').addEventListener("click", pridejZnak)
-  // const button5 = document.querySelector('button:nth-child(5)').addEventListener("click", pridejZnak)
-  // const button6 = document.querySelector('button:nth-child(6)').addEventListener("click", pridejZnak)
-  // const button7 = document.querySelector('button:nth-child(7)').addEventListener("click", pridejZnak)
-  // const button8 = document.querySelector('button:nth-child(8)').addEventListener("click", pridejZnak)
-  // const button9 = document.querySelector('button:nth-child(9)').addEventListener("click", pridejZnak)
-  // const button10 = document.querySelector('button:nth-child(10)').addEventListener("click", pridejZnak)
-
+  
 
 // bonus
 
@@ -55,16 +75,17 @@ buttons.forEach((button) => {
 });
 
 
+// const herniPole = Array.from(buttons).map((button) => {
+//   if (button.classList.contains('board__field--circle')){
+//     return 'o';
+//   }
+//   if (button.classList.contains('board__field--cross')){
+//     return 'x';
+//   }
+//   return '_';
+// });
 
-// const herniPole = [
-// '_', 'o', 'x',
-// 'x', 'o', '_',
-// '_', 'o', '_',
-// ]
-// const vitez = findWinner(herniPole)
-// if (vitez === 'o' || vitez === 'x') {
-// 	alert(`Vyhrál hráč se symbolem ${vitez}.`) // Vyhrál hráč se symbolem o.
-  
-// } if  (vitez === 'x' || vitez === 'o') {
-// 	alert(`Vyhrál hráč se symbolem ${vitez}.`) // Vyhrál hráč se symbolem x.
-// }
+
+
+
+
