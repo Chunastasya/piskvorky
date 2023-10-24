@@ -43,16 +43,39 @@ if (vitez === 'o' || vitez === 'x') {
     location.reload();
   };
   setTimeout(zobrazAlert, 100);
+ 
   
  
 }
 
-  }
+const hrac = async () => {
+  const player = 'x';
+
+  const API = await fetch(
+    'https://piskvorky.czechitas-podklady.cz/api/suggest-next-move',
+    {
+      method: 'POST',
+      headers: {
+        'Content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        board: herniPole,
+        player: player,
+      }),
+    },
+  );
+  const data = await API.json();
+  const { x, y } = data.position;
+  const tlacitka = buttons[x + y * 10];
+  tlacitka.click();
+};
+
+if (currentPlayer.classList.contains('#ikona-hrace')) {
+  hrac();
+}
+  };
  
   
-
-  
-
 // bonus
 
  const Refresh = (event) => {
@@ -74,16 +97,6 @@ buttons.forEach((button) => {
   button.addEventListener('click', pridejZnak);
 });
 
-
-// const herniPole = Array.from(buttons).map((button) => {
-//   if (button.classList.contains('board__field--circle')){
-//     return 'o';
-//   }
-//   if (button.classList.contains('board__field--cross')){
-//     return 'x';
-//   }
-//   return '_';
-// });
 
 
 
